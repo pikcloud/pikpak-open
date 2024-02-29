@@ -235,7 +235,7 @@ public interface TGHostInterface {
     /**
      * Forward a file in a message to the specified Bot
      * @param botId: Specified bot id
-     * @param groupId: The group id or channel id of the messageid
+     * @param groupId: The group id or channel id of the message
      * @param messageId: message id
      * @param fileId: file id
      */
@@ -244,7 +244,7 @@ public interface TGHostInterface {
     /**
      * Forward the entire message to the specified bot
      * @param botId: Specified bot id
-     * @param groupId: The group id or channel id of the messageid
+     * @param groupId: The group id or channel id of the message
      * @param messageId: message id
      */
     void sendMessageToBot(String botId, String botUrl, String groupId, String messageId);
@@ -261,6 +261,9 @@ public interface TGHostInterface {
 
 ### Predefined Classes (Documentation WIP)
 ```
+/**
+* The information of a file in the message
+*/
 public static class TGMessageFile {
     public String groupId;
     public String messageId;
@@ -272,20 +275,30 @@ public static class TGMessageFile {
     public String fileThumbnail;
     public String from;
     public String fileExtensionName;
+    public String scene;
     public String toString();
 }
 
+/**
+* PikPak account premium status information
+*/
 public static class VipStatusBean {
     public String tgUserId;
     public boolean isVip;
     public String expire;
 }
 
-public interface PPVipStatusListCallback {
-    void onVipStatusCallback(int ret, String errorContent, String errorKey, List<VipStatusBean> statusList);
-}
-
+/**
+* PikPak account premium status query callback
+*/
 public interface PPVipStatusCallback {
     void onVipStatusCallback(int ret, String errorContent, String errorKey, VipStatusBean status);
+}
+
+/**
+* PikPak account premium status batch query callback
+*/
+public interface PPVipStatusListCallback {
+    void onVipStatusCallback(int ret, String errorContent, String errorKey, List<VipStatusBean> statusList);
 }
 ```

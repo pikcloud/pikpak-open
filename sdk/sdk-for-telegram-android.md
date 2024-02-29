@@ -15,8 +15,8 @@ With the SDK in place, transferring Telegram files to the PikPak cloud drive rem
 1. Quickly send files from your chat to the PikPak cloud drive.
 1. Automatically start playback or initiate downloads after saving files.
 1. One-click registration and binding of your PikPak account, or authorization to link an existing PikPak account via the PikPak app.
-1. Display the complete main interface of the embedded PikPak App
-1. Call various functions of the embedded PikPak
+1. Display the complete main interface of the embedded PikPak App.
+1. Call various functions of the embedded PikPak.
 
 ## Usage
 Please refer to [Development Guide](sdk-for-telegram-android-development-guide.md).
