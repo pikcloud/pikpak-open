@@ -11,9 +11,9 @@ Welcome to use the Service of PikPak Open SDK.
     If not specified, the following terms in this Agreement:
 
     `Developer` refers to the natural person or other organizations that enters the PikPak Open SDK and uses Open Interface Services provided by the PikPak Open SDK to develop applications and provide services to users.
-    
+
     `PikPak Open SDK` refers to the website and the subordinate sub-pages of the aforementioned SDK developed and operated by PikPak.
-    
+
     `Open Interface Services` refers to the ability of PikPak to provide online services for data storage, synchronization, management and sharing under this Agreement. Applications developed by developers based on Open Interface Services can provide users with the ability to manage, use the storage space of PikPak account, manage and share files within the application.
 
 2. Subjects of the Agreement
@@ -21,31 +21,31 @@ Welcome to use the Service of PikPak Open SDK.
     This Agreement is concluded and committed by the Developer and PikPak.
 
 3. Content and effectiveness of the Agreement
-    
+
     3.1 Including the text of this Agreement, the PikPak User Agreement, the PikPak Privacy Policy, the other PikPak rules has issued or may be issued in the future, policies, rules, agreements, statements, notices, tips, instructions, and the aforementioned rules are the integral part of this Agreement, and have the same legal effect as this Agreement.
-    
+
     3.2 **PikPak shall has the right to formulate and modify this Agreement and relevant rules from time to time as required, and the modified agreements and rules shall be taken immediately once they are issued and publicized.If the developer does not agree to the relevant changes, it shall stop using the PikPak Open SDK service. If the developer continues to use the PikPak Open SDK service, it represents that the developer has accepted the revised agreement and rules.**
 
-4. Enter of Developers 
-    
+4. Enter of Developers
+
     4.1 Before applying to become a developer, you should first register for PikPak to become a user.
 
 5. The Service of PikPak Open SDK
 
     5.1 Developers can use the PikPak open interface service on the PikPak Open SDK. PikPak Open interface service is mainly to output PikPak related technical capabilities (including providing cloud disk file uploading, download, viewing, search, management and other basic capabilities, as well as multimedia capabilities such as audio and video playback) to developers through the interface. Developers can embed PikPak-related functions into their own applications or hardware. Developers can log in PikPak accounts to use PikPak-related functions, subject to the specific functions and permissions that PikPak opens to developers.
-    
+
     5.2 The services provided by PikPak Open SDK shall be free of charge, but PikPak may charge for the service according to the situation, or change the charging standard of the charging service. Before the above changes, PikPak will notify or announce on the corresponding service page. If the developer does not agree to the above changes, it should stop using the Service.
 
 6. The Specification of Using the Service
-    
+
     You should follow the listing specifications when you use the PikPak Open SDK service:
-    
-    6.1 Specification of producing and releasing content 
-    
+
+    6.1 Specification of producing and releasing content
+
     You shall not use the services provided by PikPak to produce, copy, publish or disseminate content that violates the provisions of the law or violates the legitimate rights and interests of PikPak, PikPak users or third parties.
 
     6.2 Specification of commercial activities
-    
+
     You undertake to comply with the following specifications during your business activities:
 
     - 6.2.1 The use of the PikPak Open SDK services in any form shall not infringe on PikPak's commercial interests, including but not limited to using the data interface provided by the PikPak Open SDK to carry out the business competitive with PikPak, or using the PikPak Open SDK services for any behavior that may adversely affect the normal operation of PikPak and PikPak Open SDK services.
@@ -54,7 +54,7 @@ Welcome to use the Service of PikPak Open SDK.
 
     - 6.2.3 Developers shall not infringe the rights and interests of users in any form and independently assume responsibility to users. Any dispute, liability arising from the application or related services developed by the developer, and any consequences arising from the developer's violation of relevant laws or this Agreement, shall be independently liable and resolved by the developer. **In case of infringement of the rights and interests of PikPak, PikPak affiliates or others, the developer shall bear all the responsibilities and compensate for all the losses.**
 
-    6.3 Specification of protecting users' personal information 
+    6.3 Specification of protecting users' personal information
 
     When using the PikPak Open SDK services, developers should strictly abide by the laws on protecting users' personal information. The developer shall comply with the requirements but not limited to the following requirements:
 
@@ -64,7 +64,7 @@ Welcome to use the Service of PikPak Open SDK.
 
     - 6.3.3 The developer shall not provide the collected user's personal information to any third party in violation of the law, and shall not sell or transfer the user's personal information in any form.
 
-    6.4 Other prohibited behaviors when using the Service are as follow. 
+    6.4 Other prohibited behaviors when using the Service are as follow.
 
     - 6.4.1 No sharing of personal accounts including user token.
 
@@ -102,12 +102,8 @@ Welcome to use the Service of PikPak Open SDK.
 
     10.2 Any notice issued by PikPak to you may be provided by email or online page announcement, and shall be deemed to have been served or effective to you as of the date of sending.
 
-    10.3 The laws of Singapore shall apply to the interpretation and validity of this Agreement and the resolution of disputes. In the event of any dispute or controversy between the Developer and PikPak, the dispute or controversy shall first be resolved by amicable negotiation, and if such negotiation fails, the Developer hereby fully agrees to submit the dispute or controversy to the jurisdiction of the Singapore courts only. 
+    10.3 The laws of Singapore shall apply to the interpretation and validity of this Agreement and the resolution of disputes. In the event of any dispute or controversy between the Developer and PikPak, the dispute or controversy shall first be resolved by amicable negotiation, and if such negotiation fails, the Developer hereby fully agrees to submit the dispute or controversy to the jurisdiction of the Singapore courts only.
 
     10.4 You may use the PikPak Open SDK Service only as permitted by applicable law, including export control laws and regulations. Especially, you must represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country, the above countries include but not limited to Crimea, Cuba, So-called Donetsk People's Republic (DNR) and Luhansk People's Republic (LNR), Iran, North Korea, and Syria; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties; (iii) other counties that we are currently not providing Services to, such as the People's Republic of China.
 
     10.5 If any provision of this Agreement is completely or partially invalid or unenforceable for any reason, the remaining provisions of this Agreement shall remain valid and binding.
-
-
-
-

@@ -4,9 +4,10 @@ Please first know what is [PikPak Android SDK for Telegram](sdk-for-telegram-and
 You can use the SDK for development by following the steps below.
 
 ## Step1. Get SDK
-1. Read and confirm that you agree to [PikPak Open SDK Developer Service Agreement](sdk-developer-service-agreement.md). 
-1. Send an email to dev@mypikpak.com in the following format to apply for the SDK:
-    
+
+1. Read and confirm that you agree to [PikPak Open SDK Developer Service Agreement](sdk-developer-service-agreement.md).
+1. Send an email to <dev@mypikpak.com> in the following format to apply for the SDK:
+
     - Email title: `Apply for PikPak Android SDK for Telegram`
     - Email body:
     > I have read and agreed to the PikPak Open SDK Developer Service Agreement and apply to obtain PikPak Android SDK for Telegram. My App information is as follows:  
@@ -16,7 +17,7 @@ You can use the SDK for development by following the steps below.
     App package name: ________  
     App signature md5 hash: ________  
     I promise that the above information is true and correct, please review my application.
-    
+
     Please fill in each underlined space in the body of the email with correct and true information. Sending an email means that you fully agree with the content of the email.
 
     It should be noted that we may simply ignore applications with obvious missing or incorrect information. Even if complete information is provided, we may reject it because the App is not suitable or does not currently require more SDK integration, or we may ask for more supplementary information.
@@ -24,9 +25,11 @@ You can use the SDK for development by following the steps below.
 1. If the application is approved, you will get the download link of the SDK dedicated to your App in the email reply. The SDK is provided as an [Android Archive (AAR)](https://developer.android.com/studio/projects/android-library#aar-contents) file, download it.
 
 ## Step2. Add SDK to Your Project
+
 1. Integrate the downloaded SDK AAR file into your Telegram android Project. You can refer to [1](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency) or [2](https://stackoverflow.com/questions/16682847/how-to-manually-include-external-aar-package-using-gradle-for-android). The Telegram android App package name and signature md5 hash must be consistent with those provided during application.
 1. Add other dependencies to your Telegram android project. You can refer to [this](https://developer.android.com/build/dependencies#dependency-types). If these dependencies already exist in the project, there is no need to add them again.
-    ```
+
+    ```java
     implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10')
     implementation('android.arch.lifecycle:extensions:' + '1.1.1')
     implementation('com.google.android.material:material:1.4.0')
@@ -101,24 +104,28 @@ You can use the SDK for development by following the steps below.
     ```
 
 ## Step3. Use the SDK in Your Project
-1. Add the sdk interface calling code in your Telegram android project as needed. 
+
+1. Add the sdk interface calling code in your Telegram android project as needed.
     - Import SDK classes in your code
-    ```
+
+    ```java
     import com.pikcloud.tgapplib.PPSDKFacade;
     ```
 
     - Implement the required interfaces defined by the SDK, and Call methods of SDK classes, for example
-    ```
+
+    ```java
     PPSDKFacade.addMessageToDrive(context, ...);
     ```
 
     The required interfaces and available methods are listed in the [following paragraphs](#sdk-interface-reference).
 
-1. Build and Debug your Telegram android project. 
+1. Build and Debug your Telegram android project.
 
 ## SDK Interface Reference
 
 ### Available Methods
+
 - void PPSDKFacade.attachBaseContext(android.app.Application application, TGHostInterface tgHostInterface);
 
     Register the TGHostInterface class that needs to be implemented.
@@ -146,65 +153,77 @@ You can use the SDK for development by following the steps below.
 - void PPSDKFacade.onTGLogout(String tgUserId);
 
     Notify the current Telegram account logout.
-    - tgUserId: Telegram account user id
+  - tgUserId: Telegram account user id
 
 - void PPSDKFacade.onTGAccountSwitch(String oldTgUserId, String newTgUserId);
-    
+
     Notify the current Telegram account changed.
-    - oldTgUserId: Telegram account user id before changing
-    - newTgUserId: Telegram account user id after changing
+  - oldTgUserId: Telegram account user id before changing
+  - newTgUserId: Telegram account user id after changing
+
+- boolean isLoggedIn();
+
+    Get whether the current user has logged in to the PikPak account
+
+- void loginByUser(Context context, String scene, LoginCallback callback)
+
+    Log in to your PikPak account. If your account has already been bound, log in directly. Otherwise, the account will be bound.
+  - context: Current calling context
+  - scene: Reserved, can be empty
+  - callback: Execution result callback
 
 - void PPSDKFacade.addMessageToDrive(android.content.Context context, TGMessageFile tgMessageFile);
 
     Store a file from a message to PikPak cloud drive.
-    - context: Current calling context
-    - tgMessageFile: The file information
+  - context: Current calling context
+  - tgMessageFile: The file information
 
 - void PPSDKFacade.play(android.content.Context context, TGMessageFile tgMessageFile);
 
     Play a certain file via PikPak.
-    - context: Current calling context
-    - tgMessageFile: The file information
+  - context: Current calling context
+  - tgMessageFile: The file information
 
 - void PPSDKFacade.downloadToLocal(android.content.Context context, TGMessageFile tgMessageFile);
 
     Download a file to the device via PikPak.
-    - context: Current calling context
-    - tgMessageFile: The file information
+  - context: Current calling context
+  - tgMessageFile: The file information
 
 - void PPSDKFacade.getVipStatus(android.content.Context context, String tgUserId, PPVipStatusCallback callback);
-    
-    Query whether the PikPak account bound to the current Telegram account is a PikPak premium account.
-    - tgUserIdList: Telegram account user id
-    - callback: Query result callback
 
-- void PPSDKFacade.getFriendVipStatus(android.content.Context context, List<String> tgUserIdList, PPVipStatusListCallback callback);
-    
+    Query whether the PikPak account bound to the current Telegram account is a PikPak premium account.
+  - tgUserIdList: Telegram account user id
+  - callback: Query result callback
+
+- void PPSDKFacade.getFriendVipStatus(android.content.Context context, List\<String> tgUserIdList, PPVipStatusListCallback callback);
+
     Batch query whether the PikPak accounts bound to the accounts of friends of the current Telegram account are premium accounts.
-    - context: Current calling context
-    - tgUserIdList: Telegram account user id list
-    - callback: Query result callback
+  - context: Current calling context
+  - tgUserIdList: Telegram account user id list
+  - callback: Query result callback
 
 - void PPSDKFacade.navigateToPage(android.content.Context context, String path, Bundle param);
-    
+
     Opens the specified PikPak function or user interface.
-    - context: Current calling context
-    - path: Path to PikPak function or user interface
-        - Main page -> path: "/drive/main_tab", param: {"tab":0}
-        - Transfer -> path: "/drive/main_tab", param: {"tab":1}
-        - File list -> path: "/drive/main_tab", param: {"tab":2}
-        - My page -> path: "/drive/main_tab", param: {"tab":3}
-        - Create cloud download -> path: "/drive/task/create", param: {"url": "Cloud download link filled in the input box, can be empty"}
-        - Downloads on device -> path: "/download/task_list", param: null
-        - Purchase Premium -> path: "/account/pay_activity", param: {"refer_from": "", "aid_from": ""}
-    - param: Parameters corresponding to the path
+  - context: Current calling context
+  - path: Path to PikPak function or user interface
+    - Main page -> path: "/drive/main_tab", param: {"tab":0}
+    - Transfer -> path: "/drive/main_tab", param: {"tab":1}
+    - File list -> path: "/drive/main_tab", param: {"tab":2}
+    - My page -> path: "/drive/main_tab", param: {"tab":3}
+    - Create cloud download -> path: "/drive/task/create", param: {"url": "Cloud download link filled in the input box, can be empty"}
+    - Downloads on device -> path: "/download/task_list", param: null
+    - Purchase Premium -> path: "/account/pay_activity", param: {"refer_from": "", "aid_from": ""}
+  - param: Parameters corresponding to the path
 
 - TGHostInterface getTGHostInterface();
 
     Get registered TGHostInterface class.
 
 ### Required Interface to be Implemented
-```
+
+```java
 public interface TGHostInterface {
     /**
      * PikPak account Premium status has changed
@@ -260,7 +279,8 @@ public interface TGHostInterface {
 ```
 
 ### Predefined Classes (Documentation WIP)
-```
+
+```java
 /**
 * The information of a file in the message
 */
@@ -286,6 +306,14 @@ public static class VipStatusBean {
     public String tgUserId;
     public boolean isVip;
     public String expire;
+}
+
+/**
+* PikPak account login callback
+*/
+public interface LoginCallback {
+    void onSuccess();
+    void onError(String error);
 }
 
 /**
