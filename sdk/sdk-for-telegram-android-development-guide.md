@@ -29,78 +29,78 @@ You can use the SDK for development by following the steps below.
 1. Integrate the downloaded SDK AAR file into your Telegram android Project. You can refer to [1](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency) or [2](https://stackoverflow.com/questions/16682847/how-to-manually-include-external-aar-package-using-gradle-for-android). The Telegram android App package name and signature md5 hash must be consistent with those provided during application.
 1. Add other dependencies to your Telegram android project. You can refer to [this](https://developer.android.com/build/dependencies#dependency-types). If these dependencies already exist in the project, there is no need to add them again.
 
-    ```java
-    implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10')
-    implementation('android.arch.lifecycle:extensions:' + '1.1.1')
-    implementation('com.google.android.material:material:1.4.0')
-    implementation('androidx.appcompat:appcompat:1.4.2')
-    implementation('androidx.legacy:legacy-support-v4:1.0.0')
-    implementation('androidx.constraintlayout:constraintlayout:2.1.4')
-    implementation('androidx.core:core-ktx:1.8.0')
-    implementation('androidx.viewpager2:viewpager2:1.1.0-beta01')
-    implementation('androidx.annotation:annotation:1.2.0')
-    implementation('androidx.biometric:biometric:1.1.0')
-    implementation('androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha02')
-    implementation('androidx.core:core-splashscreen:1.0.0')
-    implementation('androidx.startup:startup-runtime:1.1.1')
-    implementation('com.google.android.gms:play-services-auth:20.2.0')
-    implementation('com.google.android.gms:play-services-auth-api-phone:18.0.1')
-    implementation('com.google.android.gms:play-services-identity:18.0.1')
-    implementation('com.google.android.gms:play-services-base:18.1.0')
-    implementation('com.google.code.gson:gson:2.8.5')
-    implementation platform('com.google.firebase:firebase-bom:32.1.0')
-    implementation('com.google.firebase:firebase-dynamic-links')
-    implementation('com.google.firebase:firebase-analytics')
-    implementation('com.google.firebase:firebase-auth')
-    implementation('com.google.firebase:firebase-messaging')
-    implementation('com.google.android.play:core:1.10.0')
-    implementation('com.google.firebase:firebase-crashlytics')
-    implementation('com.google.firebase:firebase-crashlytics-ndk')
-    implementation('com.google.firebase:firebase-perf')
-    implementation('com.google.android.gms:play-services-ads-identifier:17.0.1')
-    implementation('com.github.tiann:FreeReflection:3.1.0')
-    implementation('com.github.bumptech.glide:glide:4.15.1')
-    implementation('com.github.bumptech.glide:okhttp3-integration:4.15.1')
-    implementation('jp.wasabeef:glide-transformations:4.3.0')
-    implementation('com.tencent.mars:mars-xlog:1.2.6')
-    implementation('com.squareup.okhttp3:okhttp:' + '3.12.13')
-    implementation('com.facebook.android:facebook-login:12.0.1')
-    implementation('com.facebook.android:facebook-android-sdk:12.0.1')
-    implementation('com.android.billingclient:billing:5.1.0')
-    implementation('com.xiaomi.billingclient:billing:1.1.0')
-    implementation('com.airbnb.android:lottie:6.0.0')
-    implementation('io.github.scwang90:refresh-layout-kernel:2.0.5')
-    implementation('io.github.scwang90:refresh-header-classics:2.0.5')
-    implementation('com.meituan.android.walle:library:' + '1.1.7')
-    implementation('com.meituan.android.walle:payload_reader:1.1.7')
-    implementation('com.alibaba:arouter-api:1.5.2')
-    implementation('com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-api:1.0.4')
-    implementation('io.github.jeremyliao:live-event-bus-x:1.8.0')
-    implementation('com.yanzhenjie:sofia:1.0.5')
-    implementation('com.tencent.bugly:crashreport:4.1.9.2')
-    implementation('com.tencent.bugly:nativecrashreport:3.9.2')
-    implementation('com.googlecode.libphonenumber:libphonenumber:8.12.57')
-    implementation('com.klinkerapps:link_builder:2.0.5')
-    implementation('com.github.jenly1314:zxing-lite:2.4.0')
-    implementation('com.tencent:mmkv:1.2.16')
-    implementation('com.adjust.sdk:adjust-android:4.33.4')
-    implementation('com.paypal.checkout:android-sdk:0.112.0')
-    implementation('com.getkeepsafe.relinker:relinker:1.4.5')
-    implementation('io.github.idisfkj:android-startup:1.1.0')
-    implementation('com.github.Jay-Goo:RangeSeekBar:v3.0.0')
-    implementation('io.github.knight-zxw:spwaitkiller:0.0.8')
-    implementation('org.lsposed.hiddenapibypass:hiddenapibypass:4.3')
-    implementation('org.greenrobot:greendao:3.3.0')
-    implementation('org.fourthline.cling:cling-core:2.1.1')
-    implementation('org.fourthline.cling:cling-support:2.1.1')
-    implementation('org.eclipse.jetty:jetty-server:8.1.22.v20160922')
-    implementation('org.eclipse.jetty:jetty-client:8.1.22.v20160922')
-    implementation('org.eclipse.jetty:jetty-servlet:8.1.22.v20160922')
-    implementation('org.bouncycastle:bcprov-jdk15on:1.60')
-    implementation('com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.0')
-    implementation('com.android.installreferrer:installreferrer:2.2')
-    implementation('com.aliyun.dpa:oss-android-sdk:2.9.13')
-    implementation('cloud.xbase.sdk:core:2.0.1.200201')
+    ```groovy
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'androidx.biometric:biometric:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.2.0-alpha02'
+    implementation 'androidx.core:core-splashscreen:1.0.0'
+    implementation 'androidx.startup:startup-runtime:1.1.1'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    implementation 'com.google.android.gms:play-services-identity:18.0.1'
+    implementation 'com.google.android.gms:play-services-base:18.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation platform 'com.google.firebase:firebase-bom:32.1.0'
+    implementation 'com.google.firebase:firebase-dynamic-links'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.android.play:core:1.10.0'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-crashlytics-ndk'
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.1'
+    implementation 'com.github.tiann:FreeReflection:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.15.1'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'com.tencent.mars:mars-xlog:1.2.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.13'
+    implementation 'com.facebook.android:facebook-login:12.0.1'
+    implementation 'com.facebook.android:facebook-android-sdk:12.0.1'
+    implementation 'com.android.billingclient:billing:5.1.0'
+    implementation 'com.xiaomi.billingclient:billing:1.1.0'
+    implementation 'com.airbnb.android:lottie:6.0.0'
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.0.5'
+    implementation 'io.github.scwang90:refresh-header-classics:2.0.5'
+    implementation 'com.meituan.android.walle:library:1.1.7'
+    implementation 'com.meituan.android.walle:payload_reader:1.1.7'
+    implementation 'com.alibaba:arouter-api:1.5.2'
+    implementation 'com.github.hufeiyang.Android-AppLifecycleMgr:applifecycle-api:1.0.4'
+    implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
+    implementation 'com.yanzhenjie:sofia:1.0.5'
+    implementation 'com.tencent.bugly:crashreport:4.1.9.2'
+    implementation 'com.tencent.bugly:nativecrashreport:3.9.2'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.57'
+    implementation 'com.klinkerapps:link_builder:2.0.5'
+    implementation 'com.github.jenly1314:zxing-lite:2.4.0'
+    implementation 'com.tencent:mmkv:1.2.16'
+    implementation 'com.adjust.sdk:adjust-android:4.33.4'
+    implementation 'com.paypal.checkout:android-sdk:0.112.0'
+    implementation 'com.getkeepsafe.relinker:relinker:1.4.5'
+    implementation 'io.github.idisfkj:android-startup:1.1.0'
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v3.0.0'
+    implementation 'io.github.knight-zxw:spwaitkiller:0.0.8'
+    implementation 'org.lsposed.hiddenapibypass:hiddenapibypass:4.3'
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'org.fourthline.cling:cling-core:2.1.1'
+    implementation 'org.fourthline.cling:cling-support:2.1.1'
+    implementation 'org.eclipse.jetty:jetty-server:8.1.22.v20160922'
+    implementation 'org.eclipse.jetty:jetty-client:8.1.22.v20160922'
+    implementation 'org.eclipse.jetty:jetty-servlet:8.1.22.v20160922'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.60'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.0'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.13'
+    implementation 'cloud.xbase.sdk:core:2.0.1.200201'
     ```
 
 ## Step3. Use the SDK in Your Project
